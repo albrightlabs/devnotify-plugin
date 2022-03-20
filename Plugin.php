@@ -1,4 +1,4 @@
-<?php namespace AlbrightLabs\DevNotify;
+<?php namespace Albrightlabs\DevNotify;
 
 use Route;
 use Config;
@@ -6,8 +6,8 @@ use Backend;
 use Redirect;
 use System\Classes\PluginBase;
 use System\Classes\SettingsManager;
-use AlbrightLabs\DevNotify\Classes\Notification;
-use AlbrightLabs\DevNotify\Models\Settings;
+use Albrightlabs\DevNotify\Classes\Notification;
+use Albrightlabs\DevNotify\Models\Settings;
 use Backend\Controllers\Users;
 use Backend\Models\User;
 
@@ -130,7 +130,7 @@ class Plugin extends PluginBase
                 'description' => 'Manage error log developer notifications.',
                 'category'    => SettingsManager::CATEGORY_LOGS,
                 'icon'        => 'icon-exclamation-triangle',
-                'class'       => \AlbrightLabs\DevNotify\Models\Settings::class,
+                'class'       => \Albrightlabs\DevNotify\Models\Settings::class,
                 'order'       => 910,
                 'keywords'    => 'dev notify options email sms',
                 'permissions' => ['albrightlabs.devnotify::manage_settings',],

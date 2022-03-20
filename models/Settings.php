@@ -1,7 +1,7 @@
-<?php namespace AlbrightLabs\DevNotify\Models;
+<?php namespace Albrightlabs\DevNotify\Models;
 
 use Model;
-use AlbrightLabs\DevNotify\Classes\Notification;
+use Albrightlabs\DevNotify\Classes\Notification;
 
 class Settings extends Model
 {

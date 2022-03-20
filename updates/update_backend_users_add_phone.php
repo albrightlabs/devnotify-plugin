@@ -1,4 +1,4 @@
-<?php namespace AlbrightLabs\DevNotify\Updates;
+<?php namespace Albrightlabs\DevNotify\Updates;
 
 use Schema;
 use October\Rain\Database\Schema\Blueprint;

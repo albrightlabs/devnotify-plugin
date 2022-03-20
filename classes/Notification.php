@@ -1,10 +1,10 @@
-<?php namespace AlbrightLabs\DevNotify\Classes;
+<?php namespace Albrightlabs\DevNotify\Classes;
 
 use Mail;
 use Config;
 use Backend\Models\User;
 use Twilio\Rest\Client as TwilioClient;
-use AlbrightLabs\DevNotify\Models\Settings;
+use Albrightlabs\DevNotify\Models\Settings;
 
 /**
  * Message Class
