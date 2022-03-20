@@ -22,6 +22,7 @@ Run either of the following commands:
 
 ## 🚨 Are there any requirements for this plugin?
 If you enable SMS notifications, you'll need an active, funded Twilio account and phone number.
+You'll also need to add a phone number for each admin you wish to notify via SMS. This can be done via an admin's profile.
 
 ## 🔥 How to manually send notifications
 1. Add `use Albrightlabs\DevNotify\Classes\Notification` to class where notification is to be sent from

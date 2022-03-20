@@ -6,7 +6,7 @@ use Backend;
 use Redirect;
 use System\Classes\PluginBase;
 use System\Classes\SettingsManager;
-use Albrightlabs\DevNotify\Classes\Notification;
+use Albrightlabs\DevNotify\Classes\NotificationManager;
 use Albrightlabs\DevNotify\Models\Settings;
 use Backend\Controllers\Users;
 use Backend\Models\User;
@@ -51,8 +51,8 @@ class Plugin extends PluginBase
          */
         \System\Models\EventLog::extend(function($model) {
             $model->bindEvent('model.afterCreate', function() use ($model) {
-                // sends notification using the built-in Notification::send feature
-                Notification::send('New error logged by the application! '.Config::get('app.url').'/backend/system/eventlogs/preview/'.$model->id, $model->message);
+                // sends notification using the built-in NotificationManager::send feature
+                NotificationManager::send('New error logged by the application! '.Config::get('app.url').'/backend/system/eventlogs/preview/'.$model->id, $model->message);
             });
         });
 
@@ -92,10 +92,10 @@ class Plugin extends PluginBase
          * Adds a configuration test
          */
         Route::get('/albrightlabs/devnotify/configuration/test', function () {
-            if(Settings::get('append_log_to_email'))
-                Notification::send('Test notification!', 'This is an example error log message...');
+            if (Settings::get('append_log_to_email'))
+                NotificationManager::send('Test notification!', 'This is an example error log message...');
             else
-                Notification::send('Test notification!');
+                NotificationManager::send('Test notification!');
 
             return Redirect::to(Config::get('app.url').'/backend/system/settings/update/albrightlabs/devnotify/devnotify');
         });
