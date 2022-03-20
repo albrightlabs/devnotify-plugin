@@ -25,8 +25,8 @@ If you enable SMS notifications, you'll need an active, funded Twilio account an
 You'll also need to add a phone number for each admin you wish to notify via SMS. This can be done via an admin's profile.
 
 ## 🔥 How to manually send notifications
-1. Add `use Albrightlabs\DevNotify\Classes\Notification` to class where notification is to be sent from
-2. Call the function `Notification::send(MESSAGE_CONTENT)`, where MESSAGE_CONTENT is the content of your notification
+1. Add `use Albrightlabs\DevNotify\Classes\NotificationManager` to class where notification is to be sent from
+2. Call the function `NotificationManager::send(MESSAGE_CONTENT)`, where MESSAGE_CONTENT is the content of your notification
 
 ## ⚙️ Explanation of settings
 * Email and SMS notifications can be enabled individually or together

@@ -24,7 +24,7 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'DevNotify',
+            'name'        => 'Dev Notify',
             'description' => 'Provides the ability to notify developers of error logs via email or SMS.',
             'author'      => 'Albright Labs LLC',
             'icon'        => 'icon-bell-o',
