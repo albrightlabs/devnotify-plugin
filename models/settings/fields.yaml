@@ -1,0 +1,62 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    _hint:
+        label: ''
+        type: partial
+        path: $/albrightlabs/devnotify/models/settings/_field_hint.htm
+    email_notifications_enabled:
+        label: Enable email notifications
+        comment: Sends an email for each event log.
+        type: checkbox
+    append_log_to_email:
+        label: Append error log
+        comment: When checked, the error log will be added to the email notification.
+        type: checkbox
+        cssClass: field-indent
+        trigger:
+            field: email_notifications_enabled
+            action: show
+            condition: checked
+    enable_sms_notifications:
+        label: Enabled SMS notifications
+        comment: Send an SMS message for each event log (requires an active and attached Twilio account).
+        type: checkbox
+    twilio_sid:
+        label: SID
+        trigger:
+            field: enable_sms_notifications
+            action: show
+            condition: checked
+        cssClass: field-indent
+        span: auto
+    twilio_token:
+        label: Token
+        trigger:
+            field: enable_sms_notifications
+            action: show
+            condition: checked
+        cssClass: field-indent
+        span: auto
+    twilio_number:
+        label: Number
+        comment: Your Twilio phone number.
+        trigger:
+            field: enable_sms_notifications
+            action: show
+            condition: checked
+        cssClass: field-indent
+    prefix_application_name_to_notification:
+        label: Prefix application name
+        comment: When checked, the application name will be prefixed to the SMS content and the email notification subject.
+        type: checkbox
+    administrators:
+        label: Administrators
+        commentAbove: Selected backend users will receive email and/or SMS notifications.
+        type: checkboxlist
+    _test:
+        label: ''
+        type: partial
+        path: $/albrightlabs/devnotify/models/settings/_field_test.htm

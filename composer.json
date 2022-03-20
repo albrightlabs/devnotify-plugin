@@ -1,0 +1,9 @@
+{
+    "name": "albrightlabs/devnotify-plugin",
+    "type": "october-plugin",
+    "description": "Provides the ability to notify developers of error logs via email or SMS.",
+    "require": {
+        "composer/installers": "~1.0",
+        "october/system": "^2.0"
+    }
+}

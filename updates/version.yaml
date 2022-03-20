@@ -1,0 +1,5 @@
+1.0.1: First version of DevNotify
+1.0.2:
+    - Second version of DevNotify
+    - Adds phone number to backend users table
+    - update_backend_users_add_phone.php
