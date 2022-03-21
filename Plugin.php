@@ -28,7 +28,7 @@ class Plugin extends PluginBase
             'description' => 'Provides the ability to notify developers of error logs via email or SMS.',
             'author'      => 'Albright Labs LLC',
             'icon'        => 'icon-bell-o',
-            'icon-svg'    => '$/albrightlabs/devnotify/assets/images/plugin-icon.svg',
+            'icon-svg'    => '/plugins/albrightlabs/devnotify/assets/images/plugin-icon.svg',
             'homepage'    => 'https://albrightlabs.com/',
         ];
     }

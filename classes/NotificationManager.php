@@ -80,8 +80,8 @@ class NotificationManager
                 }
                 foreach ($admins as $admin_id) {
                     if ($admin = User::find($admin_id)) {
-                        if (null != $admin->phone) {
-                            $to = str_replace('(','',str_replace(')','',str_replace('-','',str_replace('+1','',$admin->phone))));
+                        if (null != $admin->albrightlabs_devnotify_phone) {
+                            $to = str_replace('(','',str_replace(')','',str_replace('-','',str_replace('+1','',$admin->albrightlabs_devnotify_phone))));
                             $message = $twilio->messages->create(
                                 '+1'.$to,
                                 [

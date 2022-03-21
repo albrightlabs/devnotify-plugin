@@ -42,8 +42,8 @@ class Settings extends Model
                 if (null != $admin->email) {
                     $admin_name .= ' - '.$admin->email;
                 }
-                if (null != $admin->phone) {
-                    $admin_name .= ' ('.$admin->phone.')';
+                if (null != $admin->albrightlabs_devnotify_phone) {
+                    $admin_name .= ' ('.$admin->albrightlabs_devnotify_phone.')';
                 }
                 $return[$admin->id] = $admin_name;
             }

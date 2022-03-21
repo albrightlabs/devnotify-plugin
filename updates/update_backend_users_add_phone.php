@@ -9,14 +9,14 @@ class UpdateBackenDUsersAddPhone extends Migration
     public function up()
     {
         Schema::table('backend_users', function($table) {
-            $table->string('phone')->nullable();
+            $table->string('albrightlabs_devnotify_phone')->nullable();
         });
     }
 
     public function down()
     {
         Schema::table('backend_users', function($table) {
-            $table->dropColumn('phone');
+            $table->dropColumn('albrightlabs_devnotify_phone');
         });
     }
 }
