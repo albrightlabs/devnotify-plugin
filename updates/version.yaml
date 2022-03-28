@@ -3,3 +3,6 @@
     - Second version of DevNotify
     - Adds phone number to backend users table
     - update_backend_users_add_phone.php
+1.0.3:
+    - Third version of DevNotify
+    - Updated settings panel icon to more closely match base system icon style
