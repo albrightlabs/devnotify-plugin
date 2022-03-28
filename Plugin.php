@@ -129,7 +129,7 @@ class Plugin extends PluginBase
                 'label'       => 'Dev Notify Options',
                 'description' => 'Manage error log developer notifications.',
                 'category'    => SettingsManager::CATEGORY_LOGS,
-                'icon'        => 'icon-exclamation-triangle',
+                'icon'        => 'icon-bell-o',
                 'class'       => \Albrightlabs\DevNotify\Models\Settings::class,
                 'order'       => 910,
                 'keywords'    => 'dev notify options email sms',
