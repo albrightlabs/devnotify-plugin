@@ -64,7 +64,7 @@ class Plugin extends PluginBase
                 return;
 
             $form->addTabFields([
-                'phone' => [
+                'albrightlabs_devnotify_phone' => [
                     'label'   => 'Phone',
                     'type'    => 'text',
                     'span'    => 'auto',
