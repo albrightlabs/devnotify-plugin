@@ -81,7 +81,7 @@ class Plugin extends PluginBase
                 return;
 
             $list->addColumns([
-                'phone' => [
+                'albrightlabs_devnotify_phone' => [
                     'label'     => 'Phone',
                     'invisible' => true,
                 ],
