@@ -23,7 +23,7 @@ class NotificationManager
     {
 
         // check if notification threshold is enabled
-        if (Settings::get('set_notiification_threshold')) {
+        if (Settings::get('set_notification_threshold')) {
 
             // log levels
             $levels = array();

@@ -53,7 +53,7 @@ fields:
         label: Prefix application name
         comment: When checked, the application name will be prefixed to the SMS content and the email notification subject.
         type: checkbox
-    set_notiification_threshold:
+    set_notification_threshold:
         label: Set notification threshold
         comment: When checked, notifications will only be sent when logs meet a set threshold.
         type: checkbox
@@ -72,7 +72,7 @@ fields:
             1: Debug
         span: auto
         trigger:
-            field: set_notiification_threshold
+            field: set_notification_threshold
             action: show
             condition: checked
         cssClass: field-indent
