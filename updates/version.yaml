@@ -9,3 +9,6 @@
 1.0.4:
     - Fourth version of DevNotify
     - Fixed a bug in the saving of admin phone number
+1.0.5:
+    - Fifth version of DevNotify
+    - Adds ability to only send notification when logs meet a set threshold

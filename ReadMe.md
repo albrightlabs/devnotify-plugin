@@ -34,6 +34,7 @@ You'll also need to add a phone number for each admin you wish to notify via SMS
 * When SMS is enabled, you'll need to provide the SID, Token, and a phone number active in your Twilio account
 * You can add the error log message to the email notification by enabling the option
 * You can prepend the application name to the email notification subject and SMS content if you manage multiple applications
+* You can set a specific log threshold that must be met in order to send event notifications
 * Use the "Test Configuration" link to test the configuration. Be sure to save your settings first!
 
 ## ✨ Future plans

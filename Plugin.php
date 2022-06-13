@@ -52,7 +52,7 @@ class Plugin extends PluginBase
         \System\Models\EventLog::extend(function($model) {
             $model->bindEvent('model.afterCreate', function() use ($model) {
                 // sends notification using the built-in NotificationManager::send feature
-                NotificationManager::send('New error logged by the application! '.Config::get('app.url').'/backend/system/eventlogs/preview/'.$model->id, $model->message);
+                NotificationManager::send('New error logged by the application! '.Config::get('app.url').'/backend/system/eventlogs/preview/'.$model->id, $model);
             });
         });
 
@@ -92,10 +92,10 @@ class Plugin extends PluginBase
          * Adds a configuration test
          */
         Route::get('/albrightlabs/devnotify/configuration/test', function () {
-            if (Settings::get('append_log_to_email'))
-                NotificationManager::send('Test notification!', 'This is an example error log message...');
-            else
-                NotificationManager::send('Test notification!');
+            $log = new \stdClass();
+            $log->message = 'This is an example error log message...';
+            $log->level = 'debug';
+            NotificationManager::send('Test notification!', $log);
 
             return Redirect::to(Config::get('app.url').'/backend/system/settings/update/albrightlabs/devnotify/devnotify');
         });

@@ -20,6 +20,7 @@ fields:
             field: email_notifications_enabled
             action: show
             condition: checked
+        span: left
     enable_sms_notifications:
         label: Enabled SMS notifications
         comment: Send an SMS message for each event log (requires an active and attached Twilio account).
@@ -31,7 +32,7 @@ fields:
             action: show
             condition: checked
         cssClass: field-indent
-        span: auto
+        span: left
     twilio_token:
         label: Token
         trigger:
@@ -52,6 +53,29 @@ fields:
         label: Prefix application name
         comment: When checked, the application name will be prefixed to the SMS content and the email notification subject.
         type: checkbox
+    set_notiification_threshold:
+        label: Set notification threshold
+        comment: When checked, notifications will only be sent when logs meet a set threshold.
+        type: checkbox
+    notification_threshold:
+        label: Notification threshold
+        type: dropdown
+        placeholder: -- Select --
+        options:
+            8: Emergency
+            7: Alert
+            6: Critical
+            5: Error
+            4: Warning
+            3: Notice
+            2: Info
+            1: Debug
+        span: auto
+        trigger:
+            field: set_notiification_threshold
+            action: show
+            condition: checked
+        cssClass: field-indent
     administrators:
         label: Administrators
         commentAbove: Selected backend users will receive email and/or SMS notifications.

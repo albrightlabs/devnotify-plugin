@@ -22,6 +22,33 @@ class NotificationManager
     public static function send($content, $log = null)
     {
 
+        // check if notification threshold is enabled
+        if (Settings::get('set_notiification_threshold')) {
+
+            // log levels
+            $levels = array();
+            $levels['emergency'] = 8;
+            $levels['alert'] = 7;
+            $levels['critical'] = 6;
+            $levels['error'] = 5;
+            $levels['warning'] = 4;
+            $levels['notice'] = 3;
+            $levels['info'] = 2;
+            $levels['debug'] = 1;
+
+            // get the threshold
+            $threshold = Settings::get('notification_threshold');
+
+            // stop process if does not meet threshold
+            if($levels[$log->level] >= $threshold){
+                // eveything good, do nothing
+            }
+            else{
+                // doesn't pass, return
+                return;
+            }
+        }
+
         // get admins froms settings
         $admins = Settings::get('administrators');
 
@@ -51,8 +78,8 @@ class NotificationManager
                     $vars = [
                         'content' => $content,
                     ];
-                    if (Settings::get('append_log_to_email') && null != $log) {
-                        $vars['log'] = $log ?? null;
+                    if (Settings::get('append_log_to_email') && null != $log->message) {
+                        $vars['log'] = $log->message ?? null;
                     }
                     Mail::send('albrightlabs.devnotify::mail.notification', $vars, function($message) use ($from, $admin, $admin_name, $subject) {
                         $message->from($from['email'], $from['name']);
