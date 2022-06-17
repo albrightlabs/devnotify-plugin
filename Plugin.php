@@ -40,12 +40,6 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-
-        /**
-         * Include the Twilio-PHP library
-         */
-        require_once('assets/vendor/twilio-php/Twilio/autoload.php');
-
         /**
          * Listen for when system/models/eventlog is created
          */

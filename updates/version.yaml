@@ -15,3 +15,6 @@
 1.0.6:
     - Sixth version of DevNotify
     - Fixes bugs from previous releases
+1.0.7:
+    - Seventh version of DevNotify
+    - Fetches twilio library more traditionally
